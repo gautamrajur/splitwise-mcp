@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gr-splitwise-mcp
+    runtime: python
+    buildCommand: pip install -e .
+    startCommand: gr-splitwise-mcp
+    envVars:
+      - key: MCP_TRANSPORT
+        value: streamable-http
+      - key: PORT
+        value: "8000"
+      - key: SPLITWISE_API_KEY
+        sync: false

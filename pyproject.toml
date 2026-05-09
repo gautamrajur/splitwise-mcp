@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gr-splitwise-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP server for Splitwise - create and manage expenses, splits, and groups directly from Claude"
 authors = [{ name = "Gautam Raju", email = "reachgautam10@gmail.com" }]
 readme = "README.md"

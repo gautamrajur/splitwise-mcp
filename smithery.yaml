@@ -3,17 +3,18 @@ description: Create and manage Splitwise expenses, splits, and groups directly f
 homepage: https://github.com/gautamrajur/splitwise-mcp
 license: MIT
 
+configSchema:
+  type: object
+  required:
+    - apiKey
+  properties:
+    apiKey:
+      type: string
+      title: Splitwise API Key
+      description: Get yours at https://secure.splitwise.com/apps - create a new app and copy the API key
+
 startCommand:
   type: stdio
-  configSchema:
-    type: object
-    required:
-      - apiKey
-    properties:
-      apiKey:
-        type: string
-        title: Splitwise API Key
-        description: Get yours at https://secure.splitwise.com/apps - create a new app and copy the API key
   commandFunction: |
     (config) => ({
       command: "uvx",
