@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "splitwise-mcp"
+version = "0.1.0"
+description = "MCP server for Splitwise - create and manage expenses, splits, and groups directly from Claude"
+authors = [{ name = "Gautam Raju", email = "reachgautam10@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "httpx",
+]
+
+[project.scripts]
+splitwise-mcp = "server:main"
+
+[project.urls]
+Homepage = "https://github.com/gautamrajur/splitwise-mcp"
+Repository = "https://github.com/gautamrajur/splitwise-mcp"
+
+[tool.hatch.build.targets.wheel]
+include = ["server.py"]

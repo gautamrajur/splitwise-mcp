@@ -1,0 +1,22 @@
+name: splitwise-mcp
+description: Create and manage Splitwise expenses, splits, and groups directly from Claude. Supports per-user splits, date/notes, and group creation.
+homepage: https://github.com/gautamrajur/splitwise-mcp
+license: MIT
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiKey
+    properties:
+      apiKey:
+        type: string
+        title: Splitwise API Key
+        description: Get yours at https://secure.splitwise.com/apps - create a new app and copy the API key
+  commandFunction: |
+    (config) => ({
+      command: "uvx",
+      args: ["splitwise-mcp"],
+      env: { SPLITWISE_API_KEY: config.apiKey }
+    })
