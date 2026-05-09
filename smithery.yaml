@@ -17,6 +17,6 @@ startCommand:
   commandFunction: |
     (config) => ({
       command: "uvx",
-      args: ["splitwise-mcp"],
+      args: ["gr-splitwise-mcp"],
       env: { SPLITWISE_API_KEY: config.apiKey }
     })

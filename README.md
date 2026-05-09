@@ -1,4 +1,4 @@
-# splitwise-mcp
+# gr-splitwise-mcp
 
 MCP server for Splitwise. Create and manage expenses, splits, and groups directly from Claude — no manual entry.
 
@@ -25,7 +25,7 @@ Go to [https://secure.splitwise.com/apps](https://secure.splitwise.com/apps), cr
   "mcpServers": {
     "splitwise": {
       "command": "uvx",
-      "args": ["splitwise-mcp"],
+      "args": ["gr-splitwise-mcp"],
       "env": {
         "SPLITWISE_API_KEY": "your-api-key-here"
       }
@@ -37,7 +37,7 @@ Go to [https://secure.splitwise.com/apps](https://secure.splitwise.com/apps), cr
 ### 3. Add to Claude Code
 
 ```bash
-claude mcp add splitwise -e SPLITWISE_API_KEY=your-api-key-here -- uvx splitwise-mcp
+claude mcp add splitwise -e SPLITWISE_API_KEY=your-api-key-here -- uvx gr-splitwise-mcp
 ```
 
 ## Usage examples
